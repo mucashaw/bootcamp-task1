@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-border-btn: #219f95;
+  --color-btn: #fff;
+  --color-primery-heading: #000;
+  --color-secondary-heading: #234894;
+  --color-p: #696969;
+  --color-border-heading: #afcedd;
+  --color-white: #fff;
+  --color-body: #fff;
+}
+html {
+  font-size: 62.5%;
+  line-height: 1.7rem;
+}
+
+body {
+  color: var(--color-body);
+}
+
+.table__header {
+  margin: 4rem;
+}
+
+.table__slides {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.table__slide {
+  height: 175px;
+  width: 300px;
+  padding: 1rem;
+  margin: 6rem 3rem;
+}
+
+.slide__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.slide__date {
+  transform: translate(-240px, -35px);
+}
+
+.slide__body {
+  margin-bottom: 1rem;
+}
+
+.slide__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide__img {
+  margin-top: 1rem;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+}
+
+.btn {
+  color: var(--color-white);
+  background-color: var(--color-border-btn);
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 1.5rem 1.2rem;
+  cursor: pointer;
+}
+
+h1 {
+  font-weight: 800;
+  color: var(--color-primery-heading);
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: var(--color-secondary-heading);
+  background-color: var(--color-border-heading);
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+h3 {
+  font-weight: 600;
+  color: var(--color-secondary-heading);
+  padding-right: 1rem;
+}
+
+h4 {
+  font-weight: 700;
+  color: var(--color-primery-heading);
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-right: 1rem;
+  margin-top: 1rem;
+}
+
+p {
+  color: var(--color-p);
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .table__slides {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .table__slides {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
